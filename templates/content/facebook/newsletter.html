@@ -1,6 +1,6 @@
 {% load i18n %}
 {% if not registered %}
-<div class="content {{ content.type }}">
+<div class="box content {{ content.type }}">
     <h2>{{ content.title }}</h2>
     <p>{{ content.description }}</p>
     <a id="btn-register-newsletter" class="iframe fb-button grey" href="{% url facebook_newsletter_subscribe %}">{% trans 'Register for our Newsletter' %}</a>
