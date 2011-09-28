@@ -1,0 +1,24 @@
+{% load i18n %}
+{% if not registered %}
+<div class="content {{ content.type }}">
+    <h2>{{ content.title }}</h2>
+    <p>{{ content.description }}</p>
+    <a id="btn-register-newsletter" class="iframe fb-button grey" href="{% url facebook_newsletter_subscribe %}">{% trans 'Register for our Newsletter' %}</a>
+</div>
+{% else %}
+
+{% endif %}
+<script type="text/javascript">
+SQ.add(function(){
+    $('#btn-register-newsletter').fancybox({
+        hideOnContentClick: false,
+        titleShow: false,
+        showCloseButton: true,
+        type: 'iframe',
+        height: 460,
+        padding: 0,
+        margin: 0,
+        scrolling: 'no'
+    });
+});
+</script>
